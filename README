@@ -1,0 +1,29 @@
+_________________
+The iftex package
+v0.2
+
+This very simple package, for both Plain TeX and LaTeX,
+defines the \ifPDFTeX, \ifXeTeX, and \ifLuaTeX boolean
+for testing whether PDFTeX, or XeTeX, or LuaTeX is being
+used for typesetting.
+
+Also provides the \RequirePDFTeX, \RequireXeTeX, and \RequireLuaTeX
+command which throws an error if PDFTeX, XeTeX and LuaTeX (respectively)
+is not the engine in use.
+
+If you want to report any bugs or typos and corrections in the documentation,
+or ask for any new features, or suggest any improvements, or ask any questions
+about the package, then please do not send any direct emails to us; we will not 
+answer any direct emails. Instead please use the issue tracker:
+  <https://github.com/persian-tex/iftex/issues>
+In doing so, please always explain your issue well enough, always include
+a minimal working examples showing the issue, and always choose the appropriate
+label for your query (i.e. if you are reporting any bugs, choose `bug' label). 
+
+Current version release date: 2013/04/04
+______________
+Persian TeX Group
+persian-tex@tug.org
+
+Copyright 2010–2013
+Distributed under the LaTeX Project Public License
