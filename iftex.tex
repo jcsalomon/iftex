@@ -61,6 +61,14 @@ The package can be loaded in the usual way both in Plain \TeX\ and \LaTeX.
 \qquad\Larga{material not for \LuaTeX}\\
 \Lcs{fi}
 \end{BDef}
+\subsection{For either \LuaTeX\ or \XeTeX}
+\begin{BDef}
+\Lcs{ifLuaOrXeTeX}\\
+\qquad\Larga{material for either \LuaTeX\ or \XeTeX}\\
+\Lcs{else}\\
+\qquad\Larga{material for neither \LuaTeX\ nor \XeTeX}\\
+\Lcs{fi}
+\end{BDef}
 \section{Defined Commands}
 \subsection{For \PDFTeX}
 \begin{BDef}
@@ -77,4 +85,9 @@ This command tests for \XeTeX\ use and throws an error if a different engine is 
 \Lcs{RequireLuaTeX}
 \end{BDef}
 This command tests for \LuaTeX\ use and throws an error if a different engine is being used.
+\subsection{For either \LuaTeX\ or \XeTeX}
+\begin{BDef}
+\Lcs{RequireLuaOrXeTeX}
+\end{BDef}
+This command tests for either \LuaTeX\ or \XeTeX\ use and throws an error if a different engine is being used.
 \end{document}

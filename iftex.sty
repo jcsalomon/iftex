@@ -50,6 +50,18 @@
       ********************************************}%
     \endgroup
   \fi}
+\def\RequireLuaOrXeTeX{%
+  \ifLuaOrXeTeX\else
+    \begingroup
+      \errorcontextlines=-1\relax
+      \newlinechar=10\relax
+      \errmessage{^^J
+      ********************************************^^J
+      * LuaTeX or XeTeX is required to compile this document.^^J
+      * Sorry!^^J
+      ********************************************}%
+    \endgroup
+  \fi}
 \expandafter\ifx\csname ifPDFTeX\endcsname\relax\else
   \expandafter\endinput
 \fi
@@ -57,6 +69,9 @@
   \expandafter\endinput
 \fi
 \expandafter\ifx\csname ifLuaTeX\endcsname\relax\else
+  \expandafter\endinput
+\fi
+\expandafter\ifx\csname ifLuaOrXeTeX\endcsname\relax\else
   \expandafter\endinput
 \fi
 \newif\ifPDFTeX
@@ -79,6 +94,16 @@
   \LuaTeXfalse
 \else
   \LuaTeXtrue
+\fi
+\newif\ifLuaOrXeTeX
+\ifLuaTeX
+  \LuaOrXeTeXtrue
+\else
+  \ifXeTeX
+    \LuaOrXeTeXtrue
+  \else
+    \LuaOrXeTeXfalse
+  \fi
 \fi
 %% 
 %% Copyright © 2010–2013      by Persian TeX Group     <persian-tex@tug.org>
