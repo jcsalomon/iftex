@@ -39,28 +39,31 @@ The package can be loaded in the usual way both in Plain \TeX\ and \LaTeX.
 \section{Defined Conditionals}
 \subsection{For \PDFTeX}
 \begin{BDef}
-\Lcs{ifPDFTeX}\\
+\Lcs{ifpdf}\\
 \qquad\Larga{material for \PDFTeX}\\
 \Lcs{else}\\
 \qquad\Larga{material not for \PDFTeX}\\
 \Lcs{fi}
 \end{BDef}
+(Note: Defined in package \textsf{ifpdf}.)
 \subsection{For \XeTeX}
 \begin{BDef}
-\Lcs{ifXeTeX}\\
+\Lcs{ifxetex}\\
 \qquad\Larga{material for \XeTeX}\\
 \Lcs{else}\\
 \qquad\Larga{material not for \XeTeX}\\
 \Lcs{fi}
 \end{BDef}
+(Note: Defined in package \textsf{ifxetex}.)
 \subsection{For \LuaTeX}
 \begin{BDef}
-\Lcs{ifLuaTeX}\\
+\Lcs{ifluatex}\\
 \qquad\Larga{material for \LuaTeX}\\
 \Lcs{else}\\
 \qquad\Larga{material not for \LuaTeX}\\
 \Lcs{fi}
 \end{BDef}
+(Note: Defined in package \textsf{ifluatex}.)
 \section{Defined Commands}
 \subsection{For \PDFTeX}
 \begin{BDef}
@@ -72,6 +75,7 @@ This command tests for \PDFTeX\ use and throws an error if a different engine is
 \Lcs{RequireXeTeX}
 \end{BDef}
 This command tests for \XeTeX\ use and throws an error if a different engine is being used.
+(Defined in package \textsf{ifxetex}.)
 \subsection{For \LuaTeX}
 \begin{BDef}
 \Lcs{RequireLuaTeX}
